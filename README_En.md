@@ -2,6 +2,16 @@
 
 This project was developed to create and run automated test cases on the Pet Store API. The project performs API tests
 using Rest Assured and TestNG libraries.
+
+<table>
+  <tr>
+    <td><img src="https://i.hizliresim.com/ta0fw1s.png" alt="Örnek PNG Resim" width="125" height="125" /></td>
+    <td><img src="https://i.hizliresim.com/hxpfjh3.png" alt="Örnek PNG Resim" width="125" height="125" /></td>
+    <td><img src="https://i.hizliresim.com/nlpy6w1.png" alt="Örnek PNG Resim" width="125" height="125" /></td>
+  </tr>
+</table>
+
+
 ---
 
 ## Project Structure
@@ -30,6 +40,21 @@ PetStoreAPITask
 ```
 
 ---
+# Dependencies
+
+&rarr; This project uses the following dependencies:
+
+**`TestNG`** : A framework for test automation.
+
+**`Rest-Assured`** : A library for testing RESTful web services.
+
+**`Lombok`** : A library to reduce boilerplate code in Java.
+
+**`Gson`** : A library for converting Java objects to JSON and vice versa.
+
+<br>
+
+---
 
 # Classes, Methods and Functions
 
@@ -40,17 +65,17 @@ PetStoreAPITask
 
 ### Methods
 
-- __createValidPet()__: Creates and returns a valid pet object.
+- __`createValidPet()`__: Creates and returns a valid pet object.
 
-- __createInvalidPet()__: Creates and returns an invalid pet object.
+- __`createInvalidPet()`__: Creates and returns an invalid pet object.
 
-- __checkStatusCode(Response response, Integer expectedStatusCode)__: Checks the status code of the response. Compares
+- __`checkStatusCode(Response response, Integer expectedStatusCode)`__: Checks the status code of the response. Compares
   it with the expected status code and notifies if there is an error.
 
-- __validateErrorMessage(Response response, String expectedMessage)__ : Checks the error message in the response.
+- __`validateErrorMessage(Response response, String expectedMessage)`__ : Checks the error message in the response.
   Validates if the response contains an error message in JSON format and checks if it matches the expected message.
 
-- __setup()__ : Called before the tests start and sets the base URI for RestAssured (https://petstore.swagger.io/v2).
+- __`setup()`__ : Called before the tests start and sets the base URI for RestAssured (https://petstore.swagger.io/v2).
 
 #### <u>Detailed Description</u>
 
@@ -93,20 +118,20 @@ the tests more organized.
 
 ### Metotlar
 
-- __postMethod(Pet pet)__ : Sends a `Pet` object in JSON format via a POST request to the `/pet` endpoint and returns
+- __`postMethod(Pet pet)`__ : Sends a `Pet` object in JSON format via a POST request to the `/pet` endpoint and returns
   the response.
 
-- __getMethod(long id)__ : Retrieves a pet with the specified ID via a GET request to the `/pet/{id}` endpoint and
+- __`getMethod(long id)`__ : Retrieves a pet with the specified ID via a GET request to the `/pet/{id}` endpoint and
   returns
   the response.
 
-- __putMethod(Pet pet)__ : Sends a `Pet` object in JSON format via a PUT request to the `/pet` endpoint and returns the
+- __`putMethod(Pet pet)`__ : Sends a `Pet` object in JSON format via a PUT request to the `/pet` endpoint and returns the
   response.
 
-- __deleteMethod(long id)__ : Deletes a pet with the specified ID via a DELETE request to the `/pet/{id}` endpoint and
+- __`deleteMethod(long id)`__ : Deletes a pet with the specified ID via a DELETE request to the `/pet/{id}` endpoint and
   returns the response.
 
-- __deleteMethod(String id)__ : Deletes a pet with the specified ID via a DELETE request to the `/pet/{id}` endpoint and
+- __`deleteMethod(String id)`__ : Deletes a pet with the specified ID via a DELETE request to the `/pet/{id}` endpoint and
   returns the response.
 
 #### <u>Detailed Description</u>
@@ -122,16 +147,16 @@ convert Pet objects to JSON format.
 
 ### Methods
 
-- __testCreatePet_Positive()__ : Sends a POST request to create a new pet with valid details and verifies that the pet's
+- __`testCreatePet_Positive()`__ : Sends a POST request to create a new pet with valid details and verifies that the pet's
   name and status in the response match the expected values.
 
-- __testGetPetById_Positive()__ : Sends a GET request to retrieve a pet by its ID and verifies that the pet's name and
+- __`testGetPetById_Positive()`__ : Sends a GET request to retrieve a pet by its ID and verifies that the pet's name and
   status in the response match the expected values.
 
-- __testUpdatePet_Positive()__ : Changes the pet's name and sends a PUT request to update it; verifies that the updated
+- __`testUpdatePet_Positive()`__ : Changes the pet's name and sends a PUT request to update it; verifies that the updated
   pet's name and status in the response match the expected values.
 
-- __testDeletePet_Positive()__ : Sends a DELETE request to remove a pet by its ID and verifies that the response message
+- __`testDeletePet_Positive()`__ : Sends a DELETE request to remove a pet by its ID and verifies that the response message
   includes the pet's ID.
 
 #### <u>Detailed Description</u>
@@ -148,20 +173,20 @@ make comparisons with the expected values.
 
 ### Methods
 
-- __testCreatePet_Negative()__ : Sends a POST request to create a new pet with invalid details and verifies that the pet
+- __`testCreatePet_Negative()`__ : Sends a POST request to create a new pet with invalid details and verifies that the pet
   ID in the response does not match the expected value. It also checks the status code of the response.
 
-- __testGetPetById_Negative()__ : Sends a GET request to retrieve a pet with an invalid ID and verifies that the status
+- __`testGetPetById_Negative()`__ : Sends a GET request to retrieve a pet with an invalid ID and verifies that the status
   code of the response is 404. It also verifies that the response message contains "Pet not found".
 
-- __testUpdatePet_Negative()__ : Sends a PUT request to update pet information with invalid details and verifies that
+- __`testUpdatePet_Negative()`__ : Sends a PUT request to update pet information with invalid details and verifies that
   the status code of the response is 405. It also verifies that the pet ID in the response does not match the expected
   value.
 
-- __testDeletePet_Negative()__ : Sends a DELETE request to remove a pet with an invalid ID and verifies that the status
+- __`testDeletePet_Negative()`__ : Sends a DELETE request to remove a pet with an invalid ID and verifies that the status
   code of the response is 404. It also verifies that the response message contains "Pet not found".
 
-- __testDeletePetWithLargeID_Negative()__ : Sends a DELETE request to remove a pet with an excessively large ID and
+- __`testDeletePetWithLargeID_Negative`()__ : Sends a DELETE request to remove a pet with an excessively large ID and
   verifies that the status code of the response is 404. It also verifies that the response message contains "
   java.lang.NumberFormatException".
 
@@ -180,7 +205,7 @@ After cloning the project to your local machine, follow the steps below to insta
 1. Clone the project:
 
 ```bash
- git clone https://github.com/kullaniciadi/proje-adi.git 
+ git clone https://github.com/emresevincli/PetStoreAPITask.git 
 ``` 
 
 2. Install the required dependencies:
@@ -205,15 +230,18 @@ After cloning the project to your local machine, follow the steps below to insta
   by opening this file in a browser.
 
 ---
+<img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2xla2c3OW00cWQzbDlpa2YzbDFkZ3l2a3I5NXVpNG01YTdtYzFycyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZVik7pBtu9dNS/giphy.webp" alt="Dans Eden Kedi GIF'i" />
+
 
 ## Comments
 
 &rarr; Currently, two tests are failing:
 
-- <span style="color: red;">testCreatePet_Negative()</span>: This test fails when attempting to create a new pet with
+- **`testCreatePet_Negative()`** : This test fails when attempting to create a new pet with
   invalid details. There is an error on the API side. Expected response code: 405, received: 200. <br>
 
 
-- <span style="color: red;">testUpdatePet_Negative()</span>: This test fails when attempting to update pet information
+- **`testUpdatePet_Negative()`** : This test fails when attempting to update pet information
   with invalid details. There is an error on the API side. Expected response code: 405, received: 200.
 
+<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnpiaTNteGd3bGxsM3p0ZjdmeTE4dm40OHhoODVvc3prZzk2a2FuNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nrIj4ybdApT6zEtbtU/giphy.webp" alt="Dans Eden Kedi GIF'i" />
