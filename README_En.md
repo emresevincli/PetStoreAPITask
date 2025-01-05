@@ -29,7 +29,6 @@ PetStoreAPITask
 |                   |-- classes
 |                   |   |-- Category.java
 |                   |   |-- Pet.java
-|                   |   |-- PhotoUrls.java
 |                   |   |-- Tags.java
 |                   |-- methods
 |                   |   |-- Methods.java
@@ -96,13 +95,6 @@ the tests more organized.
   and `status`
   properties. The `Pet` class provides a representation of pets in the database or API. Thanks to the Lombok library,
   getter and setter methods are automatically generated.
-
-## PhotoUrls.java
-
-- This class is used to define the photo URLs of pets and contains the `photoUrls` property. The `PhotoUrls` class is
-  useful
-  for storing and accessing photos of pets. Thanks to the Lombok library, getter and setter methods are automatically
-  generated.
 
 ## Tags.java
 

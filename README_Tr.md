@@ -28,7 +28,6 @@ PetStoreAPITask
 |                   |-- classes
 |                   |   |-- Category.java
 |                   |   |-- Pet.java
-|                   |   |-- PhotoUrls.java
 |                   |   |-- Tags.java
 |                   |-- methods
 |                   |   |-- Methods.java
@@ -94,12 +93,6 @@ düzenli olmasını sağlar.
 - Bu sınıf, evcil hayvanların çeşitli özelliklerini tanımlamak için kullanılır ve `id`, `category`, `name`, `photoUrls`, `tags`,
   ve `status` özelliklerini içerir. `Pet` sınıfı, evcil hayvanların veritabanındaki veya API'deki temsilini sağlar. Lombok
   kütüphanesi sayesinde, getter ve setter metotları otomatik olarak oluşturulur.
-
-## PhotoUrls.java
-
-- Bu sınıf, evcil hayvanların fotoğraf URL'lerini tanımlamak için kullanılır ve `photoUrls` özelliğini içerir. `PhotoUrls`
-  sınıfı, evcil hayvanların fotoğraflarını saklamak ve erişmek için kullanışlıdır. Lombok kütüphanesi sayesinde, getter
-  ve setter metotları otomatik olarak oluşturulur.
 
 ## Tags.java
 
