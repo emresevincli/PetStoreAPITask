@@ -116,7 +116,7 @@ the tests more organized.
 - This class provides various helper methods to perform RESTful API requests and interacts with APIs using the
   RestAssured library.
 
-### Metotlar
+### Methods
 
 - __`postMethod(Pet pet)`__ : Sends a `Pet` object in JSON format via a POST request to the `/pet` endpoint and returns
   the response.

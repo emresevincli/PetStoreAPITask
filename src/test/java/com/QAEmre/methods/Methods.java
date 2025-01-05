@@ -13,74 +13,64 @@ public class Methods {
         Gson gson = new Gson();
         String jsonBody = gson.toJson(pet);
 
-        Response response = given()
+        return given()
                 .contentType("application/json")
                 .accept(ContentType.JSON)
                 .body(jsonBody)
                 .when()
                 .log().all()
                 .request("POST", "/pet")
-                .then()
-                .extract().response().prettyPeek();
+                .prettyPeek();
 
-        return response;
     }
 
     public Response getMethod(long id) {
-        Response response = given()
+        return given()
                 .contentType("application/json")
                 .accept(ContentType.JSON)
                 .when()
                 .log().all()
                 .request("GET", "/pet/" + id)
-                .then()
-                .extract().response();
+                .prettyPeek();
 
-        return response;
     }
 
     public Response putMethod(Pet pet) {
         Gson gson = new Gson();
         String jsonBody = gson.toJson(pet);
 
-        Response response = given()
+        return given()
                 .contentType("application/json")
                 .accept(ContentType.JSON)
                 .body(jsonBody)
                 .when()
                 .log().all()
                 .request("PUT", "/pet")
-                .then()
-                .extract().response();
+                .prettyPeek();
 
-        return response;
     }
 
     public Response deleteMethod(long id) {
 
-        Response response = given()
+        return given()
                 .contentType("application/json")
                 .accept(ContentType.JSON)
                 .when()
                 .log().all()
                 .request("DELETE", "/pet/" + id)
-                .then()
-                .extract().response();
+                .prettyPeek();
 
-        return response;
     }
 
     public Response deleteMethod(String id) {
 
-        Response response = given()
+        return given()
                 .contentType("application/json")
                 .accept(ContentType.JSON)
                 .when()
                 .log().all()
                 .request("DELETE", "/pet/" + id)
-                .then()
-                .extract().response();
+                .prettyPeek();
 
-        return response;
     }
 }

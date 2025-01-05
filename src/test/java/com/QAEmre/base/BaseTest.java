@@ -20,6 +20,7 @@ public class BaseTest {
     public static final List<String> VALID_PHOTOURLS = List.of("www.resim.com/");
     public static final List<Tags> VALID_TAGS = List.of(new Tags(1, "cute"));
     public static final String VALID_STATUS = "available";
+    public static final String UPDATENAME = "Cango Updated";
 
     public static Pet createValidPet() {
         Pet validPet = new Pet();

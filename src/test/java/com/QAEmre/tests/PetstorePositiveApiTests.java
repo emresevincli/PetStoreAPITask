@@ -44,8 +44,7 @@ public class PetstorePositiveApiTests extends BaseTest {
     @Test(priority = 3, description = "Steps:\n1. Modify the pet's name.\n2. Send a PUT request to update the pet's information.\n3. Validate the status code is 200.\n4. Verify that the updated pet name and status in the response match the expected values.")
     public void testUpdatePet_Positive() {
         Reporter.log("Step 1: Modifying the pet's name.<br>");
-        String updatedName = "Cango Updated";
-        PET.setName(updatedName);
+        PET.setName(UPDATENAME);
 
         Reporter.log("Step 2: Sending a PUT request to update the pet's information.<br>");
         Response response = methods.putMethod(PET);
@@ -55,7 +54,7 @@ public class PetstorePositiveApiTests extends BaseTest {
         checkStatusCode(response,200);
 
         Reporter.log("Step 4: Verifying that the updated pet name and status in the response match the expected values.<br>");
-        Assert.assertEquals(json.getString("name"), updatedName);
+        Assert.assertEquals(json.getString("name"), UPDATENAME);
         Assert.assertEquals(json.getString("status"), PET.getStatus());
     }
 
