@@ -5,9 +5,9 @@ API testlerini gerçekleştirmek için Rest Assured ve TestNG kütüphanelerini 
 
 <table>
   <tr>
-    <td><img src="https://i.hizliresim.com/ta0fw1s.png" alt="Örnek PNG Resim" width="125" height="125" /></td>
-    <td><img src="https://i.hizliresim.com/hxpfjh3.png" alt="Örnek PNG Resim" width="125" height="125" /></td>
-    <td><img src="https://i.hizliresim.com/nlpy6w1.png" alt="Örnek PNG Resim" width="125" height="125" /></td>
+    <td><img src="https://github.com/user-attachments/assets/11aa4742-a392-4a56-a398-af6943ee8e03" alt="Örnek PNG Resim" width="125" height="125" /></td>
+    <td><img src="https://github.com/user-attachments/assets/c8cc097f-2169-4891-b0f5-af6b6d19e66b" alt="Örnek PNG Resim" width="125" height="125" /></td>
+    <td><img src="https://github.com/user-attachments/assets/b7090b2b-fa96-4cf0-a3ba-97fc2b749b4a" alt="Örnek PNG Resim" width="125" height="125" /></td>
   </tr>
 </table>
 
